@@ -1,0 +1,21 @@
+<%= form_with url: user_path(current_user), method: :patch do |f| %>
+  <div class="form-row">
+    <div class="col">
+      <%= f.text_field :first_name, placeholder: "First name", class: "form-control", required: true, value: current_user.first_name %>
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="col">
+      <%= f.text_field :last_name, placeholder: "Last name", class: "form-control", required: true, value: current_user.last_name %>
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="col">
+      <%= f.text_field :email, placeholder: "sample@email.com", class: "form-control", required: true, value: current_user.email%>
+    </div>
+  </div>
+  <br>
+  <%= f.submit "Update Account", class: "btn btn-primary" %>
+<% end %>

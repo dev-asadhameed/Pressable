@@ -1,0 +1,17 @@
+<% if @user.roles.include?('friend') && current_user.friends.any?%>
+  <div class="card text-white bg-success mb-3 friend-card">
+    <div class="card-body">
+      <h4 class="card-title">
+        <%= @presenter.invited_by %>
+        <i class="bi bi-emoji-smile"></i>
+      </h4>
+    </div>
+  </div>  
+<% end %>
+<div class="card mt-3" id ="friend-form">
+  <div class="card-body">
+    <h2 class="card-title">Invite a friend</h5>
+    <%= render 'friend_form'%>
+  </div>
+</div>
+<%= render 'friend_list'%>

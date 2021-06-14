@@ -1,0 +1,18 @@
+en:
+  errors:
+    friends:
+      create: Could not invite friend.
+    users:
+      update: Profile cannot be updated.
+    sessions:
+      find: User not found.
+  warnings:
+    friends:
+      destroy: Friend removed succesfully.
+    sessions:
+      destroy: Logged out.
+  success:
+    friends:
+      create: Friend invited successfully.
+    users:
+      update: Profile updated successfully.

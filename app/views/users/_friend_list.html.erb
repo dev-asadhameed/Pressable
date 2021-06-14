@@ -1,0 +1,32 @@
+<table class="table table-striped" id ="friend-table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Friends since</th>
+      <th scope="col">Delete friend</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if current_user.friends.blank?%>
+      <tr>
+        <td colspan="5" class="table-active" id="no-friends">You have no friends.</td>
+      </tr>
+    <% else %>
+      <% current_user.friends.each_with_index do |friend, index| %>
+        <tr>
+          <td><%= index + 1%></td>
+          <td><%= friend.first_name %></td>
+          <td><%= friend.last_name %></td>
+          <td><%= @presenter.friendship_duration(friend) %></td>
+          <td>
+            <%= button_to user_friendship_path(current_user.id, current_user.friendship(friend).id), method: :delete, class: "btn btn-danger"  do %>
+                <span class="bi bi-trash"></span>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,21 @@
+default: &default
+  adapter:  postgresql
+  host:     <%= ENV['POSTGRES_HOST'] || 'localhost' %>
+  port:     <%= ENV['POSTGRES_PORT'] || 5432 %>
+  pool:     <%= ENV['POSTGRES_POOL'] || 5 %>
+  encoding: unicode
+  username: <%= ENV['POSTGRES_USERNAME'] || 'postgres' %>
+  password: <%= ENV['POSTGRES_PASSWORD'] || 'password' %>
+  sslmode: disable
+
+development:
+  <<: *default
+  database: pressable_development
+
+test:
+  <<: *default
+  database: pressable_test
+
+production:
+  <<: *default
+  database: <%= ENV['POSTGRES_DB'] || 'pressable_production' %>

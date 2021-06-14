@@ -1,0 +1,33 @@
+<%= form_with url: users_path do |signup| %>
+  <div class="form-row">
+    <div class="col">
+      <%= signup.text_field :first_name, placeholder: "First name", class: "form-control", required: true %>
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="col">
+      <%= signup.text_field :last_name, placeholder: "Last name", class: "form-control", required: true %>
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="col">
+      <%= signup.text_field :email, placeholder: "sample@email.com", class: "form-control", required: true %>
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="col">
+      <%= signup.password_field :password, placeholder: "********", class: "form-control", required: true %>
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="col">
+      <%= signup.password_field :password_confirmation, placeholder: "********", class: "form-control", required: true %>
+    </div>
+  </div>
+  <br>
+  <%= signup.submit "Create Account", class: "btn btn-primary"  %>
+<% end %>

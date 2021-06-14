@@ -1,0 +1,23 @@
+<%= form_with url: user_friendships_path(current_user.id) do |friend| %>
+  <div class="form-row">
+    <div class="col">
+      <%= friend.text_field :first_name, placeholder: "First name", class: "form-control", required: true %>
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="col">
+      <%= friend.text_field :last_name, placeholder: "Last name", class: "form-control", required: true %>
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="col">
+      <%= friend.text_field :email, placeholder: "sample@email.com", class: "form-control", required: true %>
+    </div>
+  </div>
+  <br>
+  <%= friend.hidden_field :password, value: 'password' %>
+  <%= friend.hidden_field 'roles[]', value: 'friend' %>
+  <%= friend.submit "Invite friend", class: "btn btn-success"%>
+<% end %>

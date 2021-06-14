@@ -1,0 +1,28 @@
+<div id="login-page">
+  <div class="row">
+    <div class="col-md-8" id="site-heading">
+      <h1>Welcome to</h1>
+      <img src='pressable.png'/>
+    </div>
+    <div class="col-md-4">
+      <div class="card" id="form-card">
+        <div class="card-body" id="form-card-body">
+          <h2 class="card-title">Hi There!</h5>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#signin">Login</a></li>
+            <li><a data-toggle="tab" href="#signup">Sign up</a></li>
+          </ul>
+          <br>
+          <div class="tab-content">
+            <div id="signin" class="tab-pane fade in active">
+              <%= render "signin_form" %>
+            </div>
+            <div id="signup" class="tab-pane fade">
+              <%= render "signup_form" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
