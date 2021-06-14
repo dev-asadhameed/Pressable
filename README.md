@@ -1,5 +1,7 @@
 # Pessable Test Project
 This is a simple rails application. User can login and signup and can also invites his friends to the application.
+- I did not use devise for session handling.
+- I used bcrypt to secure password.
 ## Requirements
 - Ruby 2.6.3
 - Rails 6.0.3.6
