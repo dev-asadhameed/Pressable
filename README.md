@@ -22,7 +22,7 @@ This is a simple rails application. User can login and signup and can also invit
 ## Database
 - Postgres 13.2
 ## Installation steps
-- git clone https://github.com/usmanasifzai/pressable.git
+- git clone git@github.com:dev-asadhameed/Pressable.git
 - cd pressable
 - `bundle install`
 - `yarn`
